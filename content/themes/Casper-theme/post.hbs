@@ -35,9 +35,10 @@ into the {body} of the default.hbs template --}}
                 <img srcset="{{img_url feature_image size="s"}} 300w,
                             {{img_url feature_image size="m"}} 600w,
                             {{img_url feature_image size="l"}} 1000w,
-                            {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 800px) 400px,
-                            (max-width: 1170px) 700px,
-                            1400px" src="{{img_url feature_image size="m"}}" alt="{{title}}" />
+                            {{img_url feature_image size="xl"}} 2000w" 
+                            sizes="(max-width: 1000px) 400px,700px" 
+                            src="{{img_url feature_image size="s"}}" 
+                            alt="{{title}}" />
             </figure>
             {{/if}}
 
@@ -80,12 +81,12 @@ into the {body} of the default.hbs template --}}
                 /**
                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                
+
                 var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "ghost-{{comment_id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "ghost-{{comment_id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
-                
+
                 (function () { // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
                     s.src = 'https://deesblog-fyi.disqus.com/embed.js';
