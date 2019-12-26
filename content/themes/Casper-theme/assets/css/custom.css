@@ -92,7 +92,7 @@
 
 /* Center the header post image */
 .post-full-image {
-    display: block;
+    display: flex;
     margin: auto;
 }
 
