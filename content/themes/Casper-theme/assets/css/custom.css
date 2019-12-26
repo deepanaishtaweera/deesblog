@@ -96,7 +96,7 @@
     margin: auto;
 }
 
-/* Do not stretch header image
+/* Do not stretch header image */
 .post-full-image img {
     height: 100% !important;
 }
@@ -105,7 +105,7 @@
     .post-full-image {
         height: 100% !important;
     }
-} */
+}
 
 /* Remove the shadows as we move up the image */
 .post-full-content::before, .post-full-content::after {
