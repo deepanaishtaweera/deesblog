@@ -24,4 +24,7 @@ for dirpath, dirnames, filenames in os.walk(pathName):
         replace_file(tempFileName,".jpgg",".jpg")
         replace_file(tempFileName,".jpgpg",".jpg")
         replace_file(tempFileName,".jpgjpg",".jpg")
+        replace_file(tempFileName,".JPGG",".JPG")
+        replace_file(tempFileName,".JPGPG",".JPG")
+        replace_file(tempFileName,".JPGJPG",".JPG")
         print(tempFileName)
