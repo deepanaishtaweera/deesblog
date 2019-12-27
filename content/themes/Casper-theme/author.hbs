@@ -17,13 +17,15 @@
         <h2 class="author-bio">{{bio}}</h2>
         {{/if}}
         <div class="author-meta">
-            {{#if location}}
-            <div class="author-location">{{location}} <span class="bull">&bull;</span></div>
-            {{/if}}
             <div class="author-stats">
-                {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} <span
-                    class="bull">&bull;</span>
+                {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                <span class="bull">&bull;</span>
             </div>
+            {{#if location}}
+            <div class="author-location">{{location}} </div>
+            {{/if}}
+        </div>
+        <div class="social-links">
             {{#if website}}
             <a class="social-link social-link-wb" href="{{website}}" target="_blank"
                 rel="noopener">{{> "icons/website"}}</a>
@@ -32,8 +34,8 @@
                 target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
             <a class="social-link social-link-gh" href="https://github.com/deepanaishtaweera" title="Github"
                 target="_blank" rel="noopener">{{> "icons/github"}}</a>
-            <a class="social-link social-link-sh" href="https://www.youtube.com/user/deepanaishtaweera"
-                title="Youtube" target="_blank" rel="noopener">{{> "icons/youtube"}}</a>
+            <a class="social-link social-link-sh" href="https://www.youtube.com/user/deepanaishtaweera" title="Youtube"
+                target="_blank" rel="noopener">{{> "icons/youtube"}}</a>
             {{#if facebook}}
             <a class="social-link social-link-fb" href="{{facebook_url}}" target="_blank"
                 rel="noopener">{{> "icons/facebook"}}</a>
