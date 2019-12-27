@@ -20,6 +20,7 @@ for dirpath, dirnames, filenames in os.walk(pathName):
     for filename in [f for f in filenames if f.endswith(extension)]:
         tempFileName = os.path.join(dirpath, filename)
         replace_file(tempFileName, text_to_search, replacement_text)
+        replace_file(tempFileName, "shortcut icon", "icon")
         replace_file(tempFileName, ".pngg", ".png")
         replace_file(tempFileName, ".pngng", ".png")
         replace_file(tempFileName, ".pngpng", ".png")
