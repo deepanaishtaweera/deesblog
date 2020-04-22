@@ -5,9 +5,9 @@ import os
 import fileinput
 
 extension = ".html"
-pathName = "static/"
+pathName = "docs/"
 text_to_search = "http://localhost:2369/"
-replacement_text = "https://deesblog.fyi/static/"
+replacement_text = "https://deesblog.fyi/"
 
 
 def replace_file(filename, text_to_search, replacement_text):
