@@ -36,6 +36,6 @@ for dirpath, dirnames, filenames in os.walk(pathName):
 print(os.getcwd())
 # copy subdirectory example
 fromDirectory = os.getcwd() + "/content/images/2019"
-toDirectory = os.getcwd() + "/static/content/images/2019"
+toDirectory = os.getcwd() + "/docs/content/images/2019"
 
 copy_tree(fromDirectory, toDirectory)
