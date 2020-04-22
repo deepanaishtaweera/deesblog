@@ -15,6 +15,19 @@ def replace_file(filename, text_to_search, replacement_text):
         for line in file:
             print(line.replace(text_to_search, replacement_text), end='')
 
+def add_missing_tags(filename):
+    start_text = '<!DOCTYPE html> \n<html lang="en"> \n'
+    end_text = "</html>"
+    with fileinput.FileInput(filename, inplace=True) as file:
+        for line in file:
+            if file.isfirstline():
+                if "html" not in line:
+                    print(start_text, end='')
+            if end_text not in line:
+                print(line, end='')
+            if "</body>" in line:
+                print(end_text, end = '')
+
 
 for dirpath, dirnames, filenames in os.walk(pathName):
     for filename in [f for f in filenames if f.endswith(extension)]:
@@ -30,6 +43,7 @@ for dirpath, dirnames, filenames in os.walk(pathName):
         replace_file(tempFileName, ".JPGG", ".JPG")
         replace_file(tempFileName, ".JPGPG", ".JPG")
         replace_file(tempFileName, ".JPGJPG", ".JPG")
+        add_missing_tags(tempFileName)
         print(tempFileName)
 
 
