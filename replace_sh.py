@@ -44,6 +44,7 @@ for dirpath, dirnames, filenames in os.walk(pathName):
         replace_file(tempFileName, ".JPGPG", ".JPG")
         replace_file(tempFileName, ".JPGJPG", ".JPG")
         add_missing_tags(tempFileName)
+        replace_file(tempFileName, "http://", "https://")
         print(tempFileName)
 
 
